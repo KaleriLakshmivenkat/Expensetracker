@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Balance Section -->
+    <div class="balance">
+      <h2>Your Balance</h2>
+      <h3 id="balance">₹0</h3>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <h2>Filter Transactions</h2>
+      <div class="filter-controls">
+        <label>
+          From:
+          <input type="date" id="filter-start">
+        </label>
+        <label>
+          To:
+          <input type="date" id="filter-end">
+        </label>
+        <label>
+          Category:
+          <select id="filter-category">
+            <option value="all">All</option>
+            <!-- Categories will be populated dynamically if desired -->
+          </select>
+        </label>
+        <button id="apply-filters">Apply Filters</button>
+        <button id="clear-filters">Clear Filters</button>
+      </div>
+    </div>
+
+    <!-- Transaction History -->
+    <div class="history">
+      <h2>Transaction History</h2>
+      <ul id="transaction-list"></ul>
+    </div>
+
+    <!-- Monthly Summary -->
+    <div class="summary">
+      <h2>Monthly Summary</h2>
+      <div id="monthly-summary">
+        <!-- JS will populate total income/expenses per month -->
+      </div>
+    </div>
+
+    <!-- Add Transaction -->
+    <div class="add-transaction">
+      <h2>Add New Transaction</h2>
+      <form id="transaction-form">
+        <input type="text" id="name" placeholder="Enter name (e.g. Salary, Groceries)" required>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+        <!-- New: Date of transaction -->
+        <input type="date" id="date" required>
+        <!-- New: Category selection -->
+        <input type="text" id="category" placeholder="Enter category (e.g. Groceries, Entertainment)" required>
+        <select id="type" required>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
+
+    <!-- Export Data -->
+    <div class="export">
+      <button id="export-csv">Export as CSV</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

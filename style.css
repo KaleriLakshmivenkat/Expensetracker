@@ -1,0 +1,193 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #444;
+}
+
+h3 {
+  font-size: 24px;
+  color: #2e86de;
+}
+
+/* Balance */
+.balance {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Transaction list */
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background: #f1f1f1;
+}
+
+.history li.income {
+  border-left: 5px solid #28a745;
+}
+
+.history li.expense {
+  border-left: 5px solid #dc3545;
+}
+
+.history li button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add transaction form */
+.add-transaction form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-transaction input,
+.add-transaction select,
+.add-transaction button {
+  margin: 6px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-transaction button {
+  background: #2e86de;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+.add-transaction button:hover {
+  background: #1b4f72;
+}
+
+/* ===== New Sections ===== */
+
+/* Filters */
+.filters {
+  margin-top: 20px;
+  padding: 10px;
+  background: #eef3f8;
+  border-radius: 8px;
+}
+
+.filters h2 {
+  margin-top: 0;
+}
+
+.filter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-controls label {
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-controls input[type="date"],
+.filter-controls select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filter-controls button {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #2e86de;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-controls button:hover {
+  background: #1b4f72;
+}
+
+/* Monthly Summary */
+.summary {
+  margin-top: 20px;
+  padding: 10px;
+  background: #eef3f8;
+  border-radius: 8px;
+}
+
+#monthly-summary {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Export button */
+.export {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#export-csv {
+  padding: 10px 16px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#export-csv:hover {
+  background: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+  .filter-controls {
+    gap: 6px;
+  }
+}
